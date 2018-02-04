@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+    <head> 
+        <title> JaPNaA </title>
+        <link rel=icon href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAAC1klEQVRYR73XT4hOURjH8TtjmjEzZmiE0aSEhoVsJCVZCZGEKFsLLJSFkGInoVjZiIWsWCgp/xILkiUTioVClORf/v9/fX+u2/vc8z733jPR+9Sn3vd57znn3nPOPee8Sa1W+y+IFnRjNjbjAHZjEXq9MuImh4NoxWjMxzE8w1d8x3tcxxK0uuW9ZAxCTzwe63AGr/AT+tH6gL3ocuvxkmUINdyLZTiHd/gF26j1CfvR7dbnJYsQHZiHEyh6YkvDcBsrMcKt00uGCI3zNOzDU1Q1/APPcQpr0efVK24yQ6i7+7EJd6Ansg1ZGgZNvgfYg1nogfvkGTcpfwsvxSVoHG1jId3YPWzDIDq8Oj2NifSpp+IwNM5lE0y/aTi+4T401u7rViT/JW1cT3ABVd2t2W+vUe4G+m2dVfJfkmQMjqKocTXyFiehNyG87iM06aJ7of4hnelz8BC20sxnXMUq9EENaZGx12g4tBq6i46n/iFJ2rAAj2Er1VM/gtb3Afx5OmISbsFeK3pbxmX1Vql/SHtgBjTr9R6rYU2um5iLtlzBJGmHlthwTXiDQXttmfyXJOnEQhzHeRzETDSMqXJYjC/IGhetBVqmo+ZBYyKtuAsa5/bwd4uYjtfIGhf13g6M9MqE3GQsYiKewN6AhuQIRnllQm4yFjEWdxHewGkUHkIsNxmL0DBpt7M3oMl7Fk25gcnQKxregHbBHq9MyE3GIHT+2wrNensDmoTatju9ciE3WYbQfjEB2/EStnHRHhG9KbnJIoS26BW4DC3NtmFR919D9IbkJj2Elt5DKNuiX2ANhr8ZlSG0T+iwoe61DVr6bReiJl/GTYYIbdMXYRvMqDd0/tuJwrNfETcZInQM17ttGxbNgytYDvfYXcVNhggNwUbowKl/Ozp4DGED9Ea0eOViuEkPoX9Bq7EF6zEF0ZOtiJssQqgntFPmzgb/wk02k5tsnlryG2mmhAfjvbFtAAAAAElFTkSuQmCC">
+        <style>
+            @keyframes DarkRainbow{
+                0% {background-color:#7e0000;}
+				12.5% {background-color:#845600;}
+				25% {background-color:#747400;}
+				37.5% {background-color:#005c00;}
+				50% {background-color:#003a5a;}
+				62.5% {background-color:#600077;}
+				75% {background-color:#90005f;}
+				87.5% {background-color:#760029;}
+                100% {background-color:#7e0000;}
+            }
+            @keyframes rainbow{
+				0% {color:#ff0000;}
+				12.5% {color:#ffa600;}
+                25% {color:#ffff00;}
+                37.5% {color:#00ff00;}
+                50% {color:#00a6ff;}
+                62.5% {color:#ce00ff;}
+                75% {color:#ff00a8;}
+                87.5% {color:#ff0059;}
+                100% {color:#ff0000;}
+            }
+            body{
+                animation: DarkRainbow 60s normal linear infinite;
+                color:white;
+                padding: 8.5%;
+                cursor: default;
+                overflow-x: hidden;
+            }
+            button{
+                background-color: #6bff6b;
+                border: 0;
+                height: 42px;
+                padding-left:16px;
+                padding-right: 16px;
+                font-size:14px;
+                margin-left: 8px;
+                cursor: pointer;
+                transition: .25s;
+            }
+            button:hover{
+                background-color: #1cd41c;
+            }
+            input{
+                height: 24px;
+                padding: 9px;
+                width: 258px;
+                font-size: 16px;
+                outline: none;
+                transition: .1s;
+                background-color: #d8d8d8;
+                border: 0;
+            }
+            div{
+                margin-bottom: 10px;
+                transition: .25s;
+            }
+            a{
+                color:#d2ceff;
+                text-decoration: underline;
+            }
+            .c{
+                color: white;
+                cursor: pointer;
+            }
+            .f{
+                animation: rainbow 2s linear infinite normal;
+            }
+            .tI{
+                position:relative; 
+                left: 342px; 
+                transition: .65s cubic-bezier(0, 0, 0.3, 0.9);
+                opacity: 0;
+                font-size: 0px;
+            }
+            #head{
+                transition: .65s cubic-bezier(0, 0, 0.3, 0.9);
+            }
+            #htxt{
+                transition: .65s cubic-bezier(0, 0, 0.3, 0.9);
+                left: 0px;
+                opacity: 1;
+                font-size: 48px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function g(e){
+                switch (e.substring(0,1)){
+                    default:
+                        var a=document.getElementsByTagName(e);
+                        if(a.length<2){
+                            return a[0];
+                        }else{
+                            return a;
+                        }
+                        break;
+                    case ".":
+                        var a=document.getElementsByClassName(e.substring(1,e.length));
+                        if(a.length<2){
+                            return a[0];
+                        }else{
+                            return a;
+                        }
+                        break;
+                    case "#":
+                        return document.getElementById(e.substring(1,e.length));
+                        break;
+                                        }
+            }
+            window.g=g;
+            function IDontHaveACode(){
+                if(g(".c")){
+                    g('.c').innerHTML="Coes: <i>KeyCode</i>, <i>InternetTester4</i>, or a code that I have sent you.";
+                    g('.c').classList="";
+                }
+            }
+            window.IDontHaveACode=IDontHaveACode;
+            function bk(e){var x=e.split(''), y='';x=x.reverse();x.forEach(function(ob){y+=ob});return y;}
+            function switchTxt(e){
+                clearInterval(window.autoSwitch);
+                window.autoSwitch=setInterval(function(){switchTxt();},3e4);
+                var a=e||RandomText[Math.floor(Math.random()*RandomText.length)], d=g('#head'), f=document.createElement('span'), h=g("#htxt"), k;
+                f.innerHTML=a;
+                f.classList="tI";
+                d.appendChild(f);
+                k=d.children[1];
+                setTimeout(function(){
+                f.style="position:relative;left:0px;opacity:1;font-size: 48px;";
+                });
+                setTimeout(function(){
+                    setTimeout(function(){
+                        if(d.childElementCount>2){
+                            d.innerHTML="<span id=htxt>No spamz plz</span>";
+                        }
+                    });
+                    k.id="htxt";
+                    d.removeChild(h);
+                },650);
+                h.style="position:relative; left:-258px; opacity:0; font-size:0px;";
+            }
+            var RandomText=["Some say Leone is God...", "Nothing to say", "Kewl", "My very own site!", "I need to encode my codes", "This site is very ugly", "This site needs a renovation", "I wanna put ads here", ":/", "Who is JaPNaA?", "I'm watching you", "This site uses cookies!", "This is not a professional site.", "I can CODE!!!", "Blah Blah Blah", "Were you expecting something original?", "Why does this keep changing?", "ILLUMINATI CONFIRMED", "Code is love, code is life", "Thanks, <a href=https://www.000webhost.com target=_blank>000webhost</a>", "Rainbow background", "What is dis code u speak of?", "<span class=f>RAINBOW</span>", "Hi...", "This code thing is very hackable","Kind of pretty?", "<i>Cool transition...</i>", "Git Gud.", Math.PI, "Looks like your doing an <span class=f>Internet</span>", ":|", "RIP Harambe"]; RandomText.push("There are "+RandomText.length+" different texts, can you catch them all!?");
+            function submit(){
+                switch(g('input').value.toLowerCase()){
+                    default:
+                        switchTxt('Not Valid!');
+                        setTimeout(function(){
+                            switchTxt();
+                        },2e3)
+                        g('input').focus();
+                        g('input').select(0,g('input').value.length);
+                        break;
+                    case bk("t02kcehcrammarg"):
+                        location.assign("/1asA56as15d");
+                        break;
+                    case "":
+                        alert('You entered nothing.');
+                        alert('And nothing happed.');
+                        setTimeout(function(){
+                            location.assign('https://akk.li/pics/anne.jpg');
+                        },1e3);
+                        break;
+                    case "jap is kewl":
+                        switchTxt('Indeed.');
+                        break;
+                    case "keycode":
+                        location.assign('/9AUh8S6fhj3a');
+                        break;
+                    case bk("gnikomstiuq"):
+                        location.assign('/hJ987asAFha78');
+                        break;
+                    case "internettester4":
+                        location.assign('/aJ82a6SfgJKS78');
+                        break;
+                                           }
+            }
+            
+            function start(){
+                document.body.innerHTML="<div style='font-size:48px; font-weight:bold; color:white; height: 55px;' id=head><span id=htxt>Loading...</span></div><input id=in placeholder='Enter a code...'></input><button id=button>Submit</button><br><span id=noCode class=c onclick=IDontHaveACode() style='opacity:0.5'>I don't have a code</span>";
+                g('#in').focus();
+                for(var a=0; a<7; a++){
+                    g('#htxt').innerHTML=RandomText[Math.floor(Math.random()*RandomText.length)];
+                };
+                g('#button').addEventListener('click', submit, false);
+                g("#head").addEventListener('click', function(){switchTxt();}, true);
+                window.addEventListener('click',function(){g('#in').focus();},false);
+                window.autoSwitch=setInterval(function(){switchTxt();},3e4);
+                g('#in').addEventListener('keydown',function(e){
+                    if(e.key=="Enter"){
+                        g('#in').style="box-shadow:inset #c1c1c1 4px 4px 0px 0px;";
+                    }
+                },false);
+                g("#in").addEventListener('keyup',function(e){
+                    if(e.key=="Enter"){
+                        submit();
+                        g('#in').style="box-shadow:inset rgba(0, 0, 0, 0) 0px 0px 0px 0px;;";
+                    }
+                })
+            }
+            
+            (function(){
+                setTimeout(function(){
+                    //remove little tab thingy
+                    document.body.innerHTML="";
+                    document.cookie='WeUse=Cookies;path=/;';
+                    start();
+                },10);
+            }());
+        </script>
+    </body>
+</html>
