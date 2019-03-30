@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html><head>
+<title> HI </title>
+<script>
+var count=0;
+var account = {
+              prefix:null,
+              firstName:null,
+              middleName:null,
+              lastName:null,
+              ending:null,
+              age:null,
+              gender:null,
+};
+</script>
+<script> 
+var a, b, onoff; 
+a="<button onclick='document.getElementById(onoff).innerHTML=b'><font color=red><b>Off</b></font></button>";
+b="<button onclick='document.getElementById(onoff).innerHTML=a'><font color=green><b>On</b></font></button>"; 
+onoff="onoff"; 
+</script>
+<style>
+    #asdas{
+color:#b29672;
+    }
+    </style>
+</head>
+
+
+<body style=" background-color:burlywood ; margin:20px">
+<p id="hi"><a name=top></a>
+HI, (insert more words here)
+</p>
+<button onclick="document.getElementById('hi').innerHTML='HI, my name is <em> jefff</em>'">
+Press to insert more words</button>
+<br>
+<font><a href style=" font-size:25px ">TRY IT AGAIN!!!</a></font>
+<br><br><br>
+<a href style="font-size:16px; color:grey">Reload zhe page</a>
+<br>
+<br>
+
+<p id="hi2">Hover over the button below :)</p>
+
+<button onmouseover="count+=1; document.getElementById('hi2').innerHTML='You got on and off the button <b>'+count+'</b> times!'">
+Hover to count! </button> <button onmouseover='count*=2; document.getElementById("hi2").innerHTML="You got on and off the button <b>"+count+"</b> times!"'>
+Board of doing it normally?</button> <button onclick="count*=count; document.getElementById('hi2').innerHTML='You got on and off the button <b>'+count+'</b> times!'">
+<font color=red><b>BUTTON OF DOOM</b></font></button>
+<br>
+Another way to change the first piece of text.... By changing this piece of 'numbers'...-&gt;  <input type=number onchange="document.getElementById('hi').innerHTML='GONEEEE!!!'">
+<br><button style=" font-size:10px" onclick="count=0;document.getElementById('hi2').innerHTML='You got on and off the button <b>'+count+'</b> times!'">
+Reset count</button>
+
+<br><br><br>
+<p onclick="document.getElementById('hi3').innerHTML=''">  Click the here to show a giant dot </p>
+<p onclick="document.getElementById('hi3').innerHTML=null"> Get rid of giant dot? :(           </p>
+<a href="#hi4" style="color:#0905eb">Skip all the scrolling and go to the next JavaScript thing.</a><span id=asdas> (Well apperanly a little change to the document make this link obsolete! sooo yea....)<br> </span>
+<span id=hi3 style="font-size:10000px"></span>
+<a name="hi4"><p>lol, welcome back from all the scrolling you did... <a style="color:#0805E9" href="#top"> Go Back...</a>(or not if you were smart enough to press the link)<br> If you would like to get rid of the giant dot you may or may not have created, click:
+<br>  | there.
+<br> \/</p></a>
+<button onclick="document.getElementById('hi3').innerHTML=null"> Button of Killing giant dots.... </button>
+<br><p id=hi5>
+
+Now we had some fun, why not give me your name:<br>
+<input id=inprefix type=text onchange="account.prefix=document.getElementById('inprefix').value"> 
+<b style="font-size:30"> . </b>
+<input id=infirstname type=text onchange="account.firstName=document.getElementById('infirstname').value"> 
+<input id=inmiddlename type=text onchange="account.middleName=document.getElementById('inmiddlename').value"> 
+<input id=inlastname type=text onchange="account.lastName=document.getElementById('inlastname').value">
+<b style="font-size:30"> , </b><b style="font-size:16">/ the </b>
+<input id=inending type=text onchange="account.ending=document.getElementById('inending').value">
+<br><font color=burlywood>_____;</font>PREFIX <font color=burlywood>_____________</font>FIRST NAME <font color=burlywood>______;</font>MIDDLE NAME <font color=burlywood>_____<:</font> LAST NAME <font color=burlywood>____________</font>ENDING/JOB POS.
+<br><br><font color=burlywood>______;I</font>AGE
+<br><input id=inage type=number onchange="account.age=document.getElementById('inage').value">
+<br><br><font color=burlywood>___</font>GENDER
+<br><span id="hi5.g.m" onclick="document.getElementById('hi5.g.f').innerHTML='<font color=grey>- Female';document.getElementById('hi5.g.o').innerHTML='<font color=grey>- Other';document.getElementById('hi5.g.m').innerHTML='<font color=black>- Male'; account.gender='male';">- Male</span>
+<br><span id="hi5.g.f" onclick="document.getElementById('hi5.g.m').innerHTML='<font color=grey>- Male';document.getElementById('hi5.g.o').innerHTML='<font color=grey>- Other';document.getElementById('hi5.g.f').innerHTML='<font color=black>- Female'; account.gender='female';">- Female</span>
+<br><span id="hi5.g.o" onclick="document.getElementById('hi5.g.f').innerHTML='<font color=grey>- Female';document.getElementById('hi5.g.m').innerHTML='<font color=grey>- Male';document.getElementById('hi5.g.o').innerHTML='<font color=black>- Other'; account.gender='other';">- Other</span>
+</p>
+<button onclick="document.getElementById('hi5').innerHTML='<font size=8>Welcome, <b>'+account.prefix+'.'+account.firstName+' '+account.middleName+' '+account.lastName+' the '+account.ending+'. </b><br> You are a <b>'+account.age+'</b> year-old <b>'+account.gender+'.</b></font> <br><a href>Reload page</a>'; document.getElementById('best').innerHTML=account.firstName">Submit</button>
+<br>
+<br>
+
+<span id=onoff> 
+THE ON OFF BUTTON (first toggle button (no use yet) )
+<br>
+<button onclick="document.getElementById('onoff').innerHTML=a">
+<font color=green><b>On</b> </font> 
+
+    </button> <br><br>
+    
+</span>
+
+    
+    <span>
+        <b><span id=best> Please complete the previous JavaScript things. </span>
+        </b> is the best.
+    </span>
+</body>
+</html>
